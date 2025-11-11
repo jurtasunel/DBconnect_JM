@@ -51,6 +51,7 @@ class EntrezClient:
         rettype = rettype or config.return_type
         retmode = retmode or config.return_mode
 
+<<<<<<< HEAD
         with Entrez.efetch(db = db, id = id_list, rettype = rettype, retmode = retmode) as handle:
             records = list(SeqIO.parse(handle, rettype)) # SeqIO will only work to sequence data like "gb" or "fasta".
             
@@ -74,6 +75,13 @@ class EntrezClient:
                 print(record.name, record.seq[0:10], len(record.seq), record.description)
 
         return records
+=======
+        with Entrez.efetch(db = db, id = id, rettype = rettype, retmode = retmode) as handle:
+            records = list(SeqIO.parse(handle, rettype))
+
+        return records
+    
+>>>>>>> 62ebc2d (added main)
 
 
 
