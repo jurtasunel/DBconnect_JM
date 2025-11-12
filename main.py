@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import config
-from EntrezClient import EntrezClient
-
-def main():
-    client = EntrezClient()
-    
-    ids = client.search_database(verbose=True)
-    records = client.fetch_data(id_list = ids, verbose=True)
-
-
-    print(records)
-
-if __name__ == "__main__":
-    main()
-=======
 from EntrezClient import EntrezClient
 
 def main():
@@ -33,13 +16,12 @@ def main():
 
     # Fetch data for these IDs
     if id_list:
-        records = client.fetch_data(id=id_list)
-        print(f"Fetched {len(records)} records")
+        records = client.fetch_data(id_list=id_list)
+        print(f"Fetched {len(records)} records\n")
 
-        # Loop thorhg the records
+        # Access individual genomes: print first 10 nucleotides of each
         for record in records:
-            print(record.name, len(record.seq), record.id, record.seq[:10], record.description)
+            print(record.id, record.seq[:10], len(record.seq), record.description)
 
 if __name__ == "__main__":
     main()
->>>>>>> 62ebc2d (added main)
