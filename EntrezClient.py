@@ -139,7 +139,7 @@ class EntrezClient(BaseEntrezClient):
                 length = None
             print(f"Attribute: {key}, type: {type(value)}, length: {length}")
 
-# NEXT
+# TODO:
 # def seq_to_fasta()
 #SeqIO write to fasta outputs
     
