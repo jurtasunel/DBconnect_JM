@@ -21,7 +21,7 @@ class BaseEntrezClient:
             record = Entrez.read(handle)
 
         if verbose:
-            print(f"All accessible items of the search '{term}':")
+            print(f"All accessible items of the search '{term}' in the database '{db}':")
             for k in record.keys():
                 print(k)
             print(f"Total entries: {record['Count']}")
