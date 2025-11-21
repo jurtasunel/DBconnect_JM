@@ -35,7 +35,7 @@ class SRAClient(BaseEntrezClient):
 
         return records
 
-# NEXT:
+# TODO:
 # def download_fastqs()
 # SEND desired IDS and metadata to another file that DOWNLOADS RAW FASTQS
 # USE sra-toolkit and faster-dump with python subprocess 
