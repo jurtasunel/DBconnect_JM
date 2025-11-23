@@ -1,7 +1,7 @@
-from Bio import Entrez
 from BaseEntrezClient import BaseEntrezClient
-import csv
+from Bio import Entrez
 from io import StringIO
+import csv
 
 class SRAClient(BaseEntrezClient):
 
@@ -36,6 +36,7 @@ class SRAClient(BaseEntrezClient):
         return records
 
 # TODO:
+# Undertand class
 # def download_fastqs()
 # SEND desired IDS and metadata to another file that DOWNLOADS RAW FASTQS
 # USE sra-toolkit and faster-dump with python subprocess 

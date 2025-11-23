@@ -1,10 +1,4 @@
 
-
-#     # Do custom search modifiying some config attributes.
-#     new_id_list = client.search_database(db = "sra", term = "SRR390728", verbose = True)
-#     new_records = client.fetch_data(id_list = new_id_list, db = "sra", verbose = True, rettype = "runinfo", retmode = "text")
-    
-
 from EntrezClient import EntrezClient
 from SRAClient import SRAClient
 
@@ -33,8 +27,12 @@ def main():
     print("\nSearching SRA...")
     sra_ids = ncbi_sra.search_database(db = "sra", term = "SRR390728", verbose = True)
     runinfo = ncbi_sra.fetch_runinfo(sra_ids, verbose=True)
-    
-    
+
+### Previoyus SRA search, clarify and implement    
+#     # Do custom search modifiying some config attributes.
+#     new_id_list = client.search_database(db = "sra", term = "SRR390728", verbose = True)
+#     new_records = client.fetch_data(id_list = new_id_list, db = "sra", verbose = True, rettype = "runinfo", retmode = "text")
+
     print("all ran ok")
     
 if __name__ == "__main__":
